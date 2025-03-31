@@ -52,8 +52,9 @@ function App() {
   };
 
   return (
-    <div style={{ border: '1px solid red', padding: 10 }}>
+    <div style={{ border: '2px solid gray', padding: 10 }}>
       <div>
+        <h1>Add ToDo</h1>
         <input
           type='text'
           value={todoDescription}
@@ -64,7 +65,7 @@ function App() {
         <button onClick={resetList} style={{ marginLeft: 10, backgroundColor: 'red', color: 'white' }}>Reset List</button>
       </div>
 
-      <div>TODOs Here:</div>
+      <div><h1>ToDos Here:</h1></div>
       <ul>
         {todoList.map((todo, index) => (
           <li key={index} style={{ color: todo.completed ? 'red' : 'white' }}>

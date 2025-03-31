@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
+  max-width: 80vw;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 .logo {
@@ -39,4 +40,41 @@
 
 .read-the-docs {
   color: #888;
+}
+
+#root div{
+  min-width: 80vw;
+  min-height: auto  ;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+  border-radius: 1rem;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+#root div li{
+  font-size: 1.5rem;
+font-weight: bolder;
+list-style-type: none;
+gap: 2rem;
+}
+
+#root div h1{
+  font-size: 2.5rem;
+}
+#root div input{
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 85%;
+}
+
+#root div button{
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  max-width: 30vw;
+  max-height: fit-content;
 }
