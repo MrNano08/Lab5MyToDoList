@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+# ToDo List en React con TypeScript + SWC
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Este proyecto es una aplicación de lista de tareas (ToDo List) desarrollada en React con TypeScript y compilada con SWC. Permite a los usuarios agregar, marcar como completadas y eliminar tareas, almacenando los datos en el `localStorage` del navegador.
 
-Currently, two official plugins are available:
+## Integrantes
+- [MrNano08](https://github.com/MrNano08)
+- [otomora](https://github.com/otomora)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
+- React
+- TypeScript
+- SWC (Speedy Web Compiler)
+- HTML & CSS
 
-## Expanding the ESLint configuration
+## Características
+- Agregar tareas con una descripción y fecha de creación.
+- Marcar tareas como completadas, registrando la fecha de finalización.
+- Reorganizar la lista para mostrar las tareas completadas al final.
+- Guardar y recuperar tareas desde `localStorage`.
+- Resetear la lista de tareas.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Instalación y Ejecución
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/MrNano08/Lab5MyToDoList.git
+   ```
+2. Navegar al directorio del proyecto:
+   ```bash
+   cd Lab5MyToDoList
+   ```
+3. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+4. Ejecutar la aplicación:
+   ```bash
+   npm run dev
+   ```
+5. Abrir en el navegador: `http://localhost:5173` (o el puerto indicado en la terminal).
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Estructura del proyecto
+```
+Lab5MyToDoList/
+│── src/
+│   ├── App.tsx          # Componente principal
+│   ├── main.tsx         # Punto de entrada de la aplicación
+│   ├── App.css          # Estilos de la aplicación
+│── public/
+│── package.json        # Configuración de dependencias
+│── tsconfig.json       # Configuración de TypeScript
+│── vite.config.ts      # Configuración de Vite
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Uso
+1. Escribir una tarea en el campo de texto.
+2. Hacer clic en "Add Item" para agregar la tarea.
+3. Marcar una tarea como completada utilizando el checkbox.
+4. Hacer clic en "Reset List" para eliminar todas las tareas.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Licencia
+Este proyecto está bajo la licencia MIT.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
